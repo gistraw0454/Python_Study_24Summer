@@ -43,3 +43,15 @@
 
 ## 필기
 - Ctrl + alt 방향키 + 복사 하면 복사를 빠르게 가능
+- Python의 조건문은 if뿐임
+    - switch case문이 없대 !! 충격..
+- 삼항연산자 모양
+    - `값1 if A>B else 값2
+    - C에서는.. A>B ? 값 : 값2
+## 명령어
+- `ord` : 문자 -> 정수
+- `chr` : 정수 -> 문자
+- int() 
+- "~{}~".format(a)
+    - "~{here}~".format(here=a)
+
