@@ -54,4 +54,34 @@
 - int() 
 - "~{}~".format(a)
     - "~{here}~".format(here=a)
+```py
+#%% "ABC"에서 B를 Z로 변경
+# 문자열은 상수니 변할수없음
+strList = "ABC"
+strList.replace("B","Z")
+strList = strList.replace("B","Z")
+print(strList)
+```
+```py
+#%% 자연수를 한글로 변경
+# 입력 예) 1024
+# 출력 예) 일공이사
+han = "공일이삼사오육칠팔구"
+num = int(input())
+result = ""
 
+while num != 0:
+    result = han[num%10] + result
+    num //=10
+
+print(result)
+```
+
+## DICT
+```py
+dataDict = {}
+이렇게 선언해서 
+dataDict[0]="A"이런식으로 넣으면
+dataDict= {0:'A'} 가되고,
+dataDict[0]하면, 'A'가 조회된다. //idex느낌이 아니라 key 로 조회하는거임.
+```
