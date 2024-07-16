@@ -1,6 +1,6 @@
-# 20°­ - listżÍ tuple,dict
-- mutable (şŻÇŇźöŔÖ´Â) : list
-- immutable (şŻÇŇźöžř´Â) : tuple
+# 20강 - list와 tuple,dict
+- mutable (변할수있는) : list
+- immutable (변할수없는) : tuple
 ```py
 #%% mutable
 dataList1=[1,2,3]
@@ -8,7 +8,7 @@ dataList2=dataList1
 
 dataList2.append(4)
 print(dataList1)
-# dataList2¸Ś šŮ˛ĺ´ÂľĽ dataList1żĄľľ żľÇâo
+# dataList2를 바꿨는데 dataList1에도 영향o
 
 #%% immutable
 dataTuple1 = (1,2,3)
@@ -17,32 +17,32 @@ dataTuple2 = dataTuple1
 dataTuple2 +=4,5
 
 print(dataTuple1)
-#dataTuple2¸Ś šŮ˛ĺ´ÂľĽ dataTuple1żĄ żľÇâx
-#ŔÖ´ÂľĽŔĚĹÍ¸Ś °ĄÁŽżŔ´Â ¸ńŔű, °Ëťö ¸ńŔű, şŻ°ćx
-# dataTuple1[0]=10 ĆŠÇĂŔÇ °ŞŔş şŻ°ć ÇŇ źö žř´Ů.
+#dataTuple2를 바꿨는데 dataTuple1에 영향x
+#있는데이터를 가져오는 목적, 검색 목적, 변경x
+# dataTuple1[0]=10 튜플의 값은 변경 할 수 없다.
 ```
 ## Dict
-- ÇŃ˝ÖŔ¸ˇÎ ŔúŔĺľÇžî °ü¸Ž
-- len()Ŕť ťçżëÇĎ¸é ÇŃ˝ÖŔť 1ˇÎ ÄŤżîĆŽ
-- Ĺ°°ŞŔş ÁßşšľÉźö žřŔ¸¸ç, °ŞŔş ÁßşšŔĚ °Ą´ÉÇĎ´Ů
-- Ĺ° °ŞŔť ÁÖ¸é ą× Ĺ°ŔÇ ÂŚ˛á °ŞŔť °ĄÁö°í żÂ´Ů
+- 한쌍으로 저장되어 관리
+- len()을 사용하면 한쌍을 1로 카운트
+- 키값은 중복될수 없으며, 값은 중복이 가능하다
+- 키 값을 주면 그 키의 짝꿍 값을 가지고 온다
 
-###  DIct źąžđ
+###  DIct 선언
 ```
-dict ¸í = {Ĺ°:°Ş,Ĺ°:°Ş,...}
+dict 명 = {키:값,키:값,...}
 ```
-### Dict ťçżë
-- Ăß°Ą (Ĺ°°ŞŔĚ žřŔť ś§)
-    - `dict¸í[Ĺ°] =°Ş`
-- źöÁ¤ (Ĺ°°ŞŔĚ ŔÖŔť ś§)
-    - `dict¸í[Ĺ°] =`
-- ťčÁŚ (ÇŃ˝ÖŔĚ ťčÁŚľČ´Ů)
-    - `del dict¸í[Ĺ°]`
-- °Ëťö
-    - `Ĺ° in dict¸í` : Ĺ° °ŞŔĚ ŔÖŔ¸¸é Âü
-    - `Ĺ° not in dict¸í` : Ĺ° °ŞŔĚ žřŔ¸¸é Âü
+### Dict 사용
+- 추가 (키값이 없을 때)
+    - `dict명[키] =값`
+- 수정 (키값이 있을 때)
+    - `dict명[키] =`
+- 삭제 (한쌍이 삭제된다)
+    - `del dict명[키]`
+- 검색
+    - `키 in dict명` : 키 값이 있으면 참
+    - `키 not in dict명` : 키 값이 없으면 참
 
-### KEY şĐ¸Ž
-- list(dict¸í.keys())
-### VALUE şĐ¸Ž
-- dict¸í.values()
+### KEY 분리
+- list(dict명.keys())
+### VALUE 분리
+- dict명.values()
