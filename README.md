@@ -91,3 +91,116 @@ dataDict[0]하면, 'A'가 조회된다. //idex느낌이 아니라 key 로 조회하는거임.
 - 함수내에서 `global 전역변수` 이렇게 써주고 해당 전역변수명을 사용해주면 함수내에서 global 변수를 사용할 수 있다.
 
 파이썬 : 객체지향 (class)
+
+
+## set : 집합, 중복된 원소를 담을 수 없다.
+- 값의 유무 검사가 목적이다.
+
+## min(값, 최소값) ; 값은 최소값을 지켜야한다.
+```py
+exam =[99,78,100,91,81,85,54,100,71,50]
+score = [min(n+5,100)for n in exam]
+print(score)
+```
+
+ 
+## enumerate로 리스트의 인덱스와 값을 함께 가져온다.
+```py
+rainbow = ['red','orange','yellow','blue','navy','purple']
+for idx,value in enumerate(rainbow):
+    print("무지개의 {}번째 색은 {}입니다".format(idx+1,value))
+```
+
+## 인덱스번호 직접 구해 사용하는 방법
+```py
+#%% 1 지역번호국번에서 국번을 추출해라
+phone= input("전화번호써라: ")
+print("국번: "+phone.split("-")[1])    #3칸짜리 배열이된다.
+
+start = phone.index('-') +1
+end = phone.index('-',start)    #start부터 시작해서 - 찾기
+# end는 보통 포함이안되니 굳이 -1 할필요없다
+
+code = phone[start:end]
+print("국번: "+code)
+
+#%% 2
+comp_num = input("사업자 등록 번호\n예) 123-45-23452\n")
+#첫번째 - 인덱스 번호가 3일때
+c1 = comp_num.find("-")==3
+#두번째 - 인덱스 번호가 6일때
+c2 = comp_num.find("-",4)==6
+#총 길이가 12 일때
+c3 = len(comp_num) ==12
+#각 번호가 전부 숫자인지 검사
+c4 = comp_num.replace("-","").isdecimal()
+if c1 and c2 and c3 and c4:
+    print("올바른 사업자 등록 번호")
+else :
+    print("잘못된 사업자 등록 번호")
+```
+
+## 모듈 : .py파일
+## 패키지 : 모듈을 담고있는 폴더
+- 계산기 폴더 안에 사칙연산 파이썬 파일 4개가 있다면, 계산기 패키지 않에, 모듈이 4개 있는 것이다.
+```py
+import 모듈명
+from 모듈 import 함수
+from 모듈 import 함수1, 험수2
+from 모듈 import *
+```
+
+## random 모듈
+- random.shuffle(pot) : 임의로 pot 리스트를 섞는다.
+- random.randint(1,100) : 1부터100까지의 int중 임의로 하나를 리턴
+
+## time 모듈
+- time.sleep(2) : 2초동안 기다림
+- time.time() : 현재 시각 리턴
+
+## 파일입출력 (txt, csv, json)
+```py
+#%% 1 파일 복사하기
+fileName =""
+while True :
+    fileName = input("복사할 파일명을 입력해라")
+    #file.txt 면, txt 를 뽑아옴.
+    extName = fileName[fileName.rfind('.')+1:]
+    if extName != "txt":
+        print("복사할 수 없는 파일")
+    else:
+        break
+
+# with 문이끝나면 자동으로 close를 해준다.
+# source는 객체명
+with open(fileName,'rt',encoding="euc-kr") as source: # utf-8로 해봤는데 안되길래 이걸로함
+    with open("복사본-"+fileName,'wt') as copy:
+        while True:
+            #source라는 파일에서 한글자씩 가져온다
+            buffer=source.read(1)
+            if not buffer:
+                break
+            copy.write(buffer)
+print("복사본-"+fileName+"파일이 생성됨")
+# %% 2 csv 파일로 cctv수 구하기
+import csv
+with open('cctv.csv','r') as csvfile:
+    # csvfile에 넣을건데, `,`로 구분하겠다. 각각의 문자열을 ""로 묶겠다
+    buffer = csv.reader(csvfile,delimiter=",",quotechar='"')
+    total =0
+    for i,line in enumerate(buffer):
+        if i!=0:
+            total +=int(line[4])
+print('CCTV 총 {}대입니다.'.format(total))
+
+#%% 3 json 파일에서 읽어오기
+import json
+with open('cctv.json','r',encoding='utf-8') as jsonfile:
+    buffer = jsonfile.read()
+    cctv_list=json.loads(buffer)
+    cctv_purpose=set()
+    for place in cctv_list:
+        cctv_purpose.add(place['설치목적구분'])
+
+print(cctv_purpose)
+```
