@@ -204,3 +204,51 @@ with open('cctv.json','r',encoding='utf-8') as jsonfile:
 
 print(cctv_purpose)
 ```
+
+## class와 예외처리는 대충 이런식으로 구현한다
+```py
+import random
+
+class UpDown:
+    def __init__(self):
+        self.answer=random.randint(1,100)
+        self.count=0
+    def challenge(self):
+        self.count+=1
+        n=int(input('입력(1~100)'))
+        if n<1 or n>100:
+            raise Exception("1~100 사이만 입력해라")
+        return n 
+
+    def play(self):
+        while True:
+            try:
+                n= self.challenge()
+            except Exception as e:
+                print(e)
+            #예외처리가 발생하지 않는다면
+            else:
+                if self.answer <n :
+                    print("down")
+                elif self.answer > n : 
+                    print("up")
+                else :
+                    print("%d만의 정답" %self.count)
+                    break
+
+game = UpDown()
+game.play() 
+```
+
+## import 안될때.. 해당 모듈을 설치해준다
+- 콘솔창에 `%pip install matplotlib` (!pip 대신!) 치고 설치한 후 실행해주면된다.
+
+## 한글 폰트 깨질때?
+```py
+from matplotlib import font_manager, rc
+
+font_path ="C:\Windows\Fonts\H2HDRM.TTF"
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+
+rc('font',family=font_name)
+```
