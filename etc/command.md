@@ -1,68 +1,68 @@
-# ? ¸Þ¼Òµå
-- Æ¯Á¤ÇÑ °´Ã¼ À¯Çü¿¡ Àû¿ëÇÒ ¼ö ÀÖ´Â ±â´É
+# ðŸŸ¥ ë©”ì†Œë“œ
+- íŠ¹ì •í•œ ê°ì²´ ìœ í˜•ì— ì ìš©í•  ìˆ˜ ìžˆëŠ” ê¸°ëŠ¥
 
-## ¹®ÀÚ¿­ÀÇ ´Ù¾çÇÑ ¸Þ¼Òµå ??
+## ë¬¸ìžì—´ì˜ ë‹¤ì–‘í•œ ë©”ì†Œë“œ â¤ï¸
 ```py
-'abc'.upper()   # ´ë¹®ÀÚ ¸¸µé±â
+'abc'.upper()   # ëŒ€ë¬¸ìž ë§Œë“¤ê¸°
 
-'ABC'.lower()   # ¼Ò¹®ÀÚ ¸¸µé±â
+'ABC'.lower()   # ì†Œë¬¸ìž ë§Œë“¤ê¸°
 
-'hobby'.count('b') # 'b' ¹®ÀÚ°¡ ³ªÅ¸³ª´Â È½¼ö¼¼±â
+'hobby'.count('b') # 'b' ë¬¸ìžê°€ ë‚˜íƒ€ë‚˜ëŠ” íšŸìˆ˜ì„¸ê¸°
 
-'hobby'.find('h')   # 'h' ¹®ÀÚÀÇ index À§Ä¡¸¦ ¹ÝÈ¯
+'hobby'.find('h')   # 'h' ë¬¸ìžì˜ index ìœ„ì¹˜ë¥¼ ë°˜í™˜
 
 ','.join('ABCD')    # 'A,B,C,D'
 
-'   hello   '.rstrip()  # ' hello' ¿À¸¥ÂÊ °ø¹éÁö¿ì±â
+'   hello   '.rstrip()  # ' hello' ì˜¤ë¥¸ìª½ ê³µë°±ì§€ìš°ê¸°
 
-'   hello   '.lstrip()  # 'hello    ' ¿ÞÂÊ °ø¹éÁö¿ì±â
+'   hello   '.lstrip()  # 'hello    ' ì™¼ìª½ ê³µë°±ì§€ìš°ê¸°
 
-'   hello   '.strip()  # 'hello' °ø¹éÁö¿ì±â
+'   hello   '.strip()  # 'hello' ê³µë°±ì§€ìš°ê¸°
 
 s1 = 'Long live the King'
-s1.replace('King','Queen')  #Long Live the Queen ¹®ÀÚ¿­ ±³È¯
+s1.replace('King','Queen')  #Long Live the Queen ë¬¸ìžì—´ êµí™˜
 
-s1.title()  # Long Live The King Å¸ÀÌÆ² ¹®ÀÚ¿­·Î º¯È¯
+s1.title()  # Long Live The King íƒ€ì´í‹€ ë¬¸ìžì—´ë¡œ ë³€í™˜
 
-s1.capitalize() # Long live the king Ã¹¹®ÀÚ¸¸ ´ë¹®ÀÚ
+s1.capitalize() # Long live the king ì²«ë¬¸ìžë§Œ ëŒ€ë¬¸ìž
 
 s2 = "X:Y:Z"
-s2.split(":")   # :¸¦ ±¸ºÐÀÚ·ÎÇÏ¿© s2¹®ÀÚ¸¦ ***¸®½ºÆ®***·Î ºÐ¸® ['X','Y','Z']
+s2.split(":")   # :ë¥¼ êµ¬ë¶„ìžë¡œí•˜ì—¬ s2ë¬¸ìžë¥¼ ***ë¦¬ìŠ¤íŠ¸***ë¡œ ë¶„ë¦¬ ['X','Y','Z']
 
 'Hello' + 'World' # 'Hello World'
 
 ```
 
-# ? ³»ÀåÇÔ¼ö built-in function
-- ±âº»À¸·Î ±¸ÇöµÇ¾îÀÖ¾î Á¦°øÇÏ´Â ÇÔ¼ö
+# ðŸŸ§ ë‚´ìž¥í•¨ìˆ˜ built-in function
+- ê¸°ë³¸ìœ¼ë¡œ êµ¬í˜„ë˜ì–´ìžˆì–´ ì œê³µí•˜ëŠ” í•¨ìˆ˜
 
-## ´Ù¾çÇÑ ³»ÀåÇÔ¼ö ?
+## ë‹¤ì–‘í•œ ë‚´ìž¥í•¨ìˆ˜ ðŸ§¡
 ```py
-abs(-100)   # Àý´ñ°ª
+abs(-100)   # ì ˆëŒ“ê°’
 
-min(200,100,300,400)    # ÃÖ¼Ú°ª
+min(200,100,300,400)    # ìµœì†Ÿê°’
 
-max(200,100,300,400)    # ÃÖ´ñ°ª
+max(200,100,300,400)    # ìµœëŒ“ê°’
 
-len(str1)   # ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ¹ÝÈ¯
+len(str1)   # ë¬¸ìžì—´ì˜ ê¸¸ì´ë¥¼ ë°˜í™˜
 
-eval("100+200+300") # 600, ¹®ÀÚ¿­À» ¼öÄ¡°ª°ú ¿¬»êÀÚ·Î º¯È¯ÇÏ¿© Æò°¡
+eval("100+200+300") # 600, ë¬¸ìžì—´ì„ ìˆ˜ì¹˜ê°’ê³¼ ì—°ì‚°ìžë¡œ ë³€í™˜í•˜ì—¬ í‰ê°€
 
-sorted("EABFD") # ['A','B','C','D','E','F'] ¹®ÀÚ¿­À» ***¸®½ºÆ®***·Î Á¤·Ä
+sorted("EABFD") # ['A','B','C','D','E','F'] ë¬¸ìžì—´ì„ ***ë¦¬ìŠ¤íŠ¸***ë¡œ ì •ë ¬
 
-sorted(list=[1,2,3,4],reverse=True) # ³»¸²Â÷¼øÁ¤·Ä
+sorted(list=[1,2,3,4],reverse=True) # ë‚´ë¦¼ì°¨ìˆœì •ë ¬
 
 a_str="Hello Python"
-id(a_str)   # 4549938992 °´Ã¼ÀÇ ½Äº°°ªÀ» Á¤¼öÇüÀ¸·Î ¹ÝÈ¯
+id(a_str)   # 4549938992 ê°ì²´ì˜ ì‹ë³„ê°’ì„ ì •ìˆ˜í˜•ìœ¼ë¡œ ë°˜í™˜
 
-type(123)   # int °´Ã¼ÀÇ ÀÚ·áÇü ¹ÝÈ¯
+type(123)   # int ê°ì²´ì˜ ìžë£Œí˜• ë°˜í™˜
 
 ```
-## ¼ö½ÄÀ» °¡Áø ¹®ÀÚ¿­°ú `eval(), chr(), ord()`
+## ìˆ˜ì‹ì„ ê°€ì§„ ë¬¸ìžì—´ê³¼ `eval(), chr(), ord()`
 ```py
-eval('10+20')   # 10+20 ¹®ÀåÀ» ÆÄÀÌ½ã ¹ø¿ª±â°¡ ¼öÇà
+eval('10+20')   # 10+20 ë¬¸ìž¥ì„ íŒŒì´ì¬ ë²ˆì—­ê¸°ê°€ ìˆ˜í–‰
 
-chr(65) # 'A' Á¤¼ö-> ÇØ´çÇÏ´Â ¾Æ½ºÅ° ¹®ÀÚ
+chr(65) # 'A' ì •ìˆ˜-> í•´ë‹¹í•˜ëŠ” ì•„ìŠ¤í‚¤ ë¬¸ìž
 
-ord('A')    # 65 ¹®ÀÚ -> ÇØ´çÇÏ´Â ¾Æ½ºÅ° Á¤¼ö
+ord('A')    # 65 ë¬¸ìž -> í•´ë‹¹í•˜ëŠ” ì•„ìŠ¤í‚¤ ì •ìˆ˜
 ```
