@@ -1,147 +1,160 @@
-## ±¸¹®¿À·ù 
-- ¹®¹ý ¿À·ù, ÆÄ½Ì¿À·ù
-- ""À» »©¸Ô´Â´Ù´ø°¡.. ;¸¦ »©¸Ô´Â´Ù´ø°¡..
-## ¿¹¿Ü
-- ¹®¹ýÀûÀ¸·Î´Â ¿Ã¹Ù¸¥ ÇÁ·Î±×·¥ÀÌ ¼öÇàµµÁß ¿¹»óÄ¡ ¸øÇÑ ÀÔ·Â°ªÀÌ µé¾î¿Í ºñÁ¤»óÀûÀÎ »óÈ²À¸·Î Á¾·áµÇ´Â °æ¿ì
-- ÀÎÅÍÇÁ¸®ÅÍ´Â ¿¹¿Ü»óÈ²ÀÌ ¹ß»ýÇÏ¸é ¾î´ÀÇÔ¼öÀÇ ¾î´ÀºÎºÐ¿¡¼­ ¿¹¿Ü »óÈ²ÀÌ ¹ß»ýÇß´ÂÁö Ãâ·ÂÇØÁÖ°í ÇÁ·Î±×·¥ Á¾·ù½ÃÅ´
+# ðŸ“˜ ì˜ˆì™¸ì²˜ë¦¬ ë° íŒŒì¼ ìž…ì¶œë ¥
 
-# ¿¹¿ÜÃ³¸®
-## `try - except` ¹®
-```py
+## êµ¬ë¬¸ ì˜¤ë¥˜ (Syntax Errors)
+- ë¬¸ë²• ì˜¤ë¥˜, íŒŒì‹± ì˜¤ë¥˜
+- `""`ì„ ë¹¼ë¨¹ëŠ”ë‹¤ë˜ê°€, `;`ë¥¼ ë¹¼ë¨¹ëŠ”ë‹¤ë˜ê°€...
+
+## ì˜ˆì™¸ (Exceptions)
+- ë¬¸ë²•ì ìœ¼ë¡œëŠ” ì˜¬ë°”ë¥¸ í”„ë¡œê·¸ëž¨ì´ ìˆ˜í–‰ ë„ì¤‘ ì˜ˆìƒì¹˜ ëª»í•œ ìž…ë ¥ê°’ì´ ë“¤ì–´ì™€ ë¹„ì •ìƒì ì¸ ìƒí™©ìœ¼ë¡œ ì¢…ë£Œë˜ëŠ” ê²½ìš°
+- ì¸í„°í”„ë¦¬í„°ëŠ” ì˜ˆì™¸ ìƒí™©ì´ ë°œìƒí•˜ë©´ ì–´ëŠ í•¨ìˆ˜ì˜ ì–´ëŠ ë¶€ë¶„ì—ì„œ ì˜ˆì™¸ ìƒí™©ì´ ë°œìƒí–ˆëŠ”ì§€ ì¶œë ¥í•´ì£¼ê³  í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œì‹œí‚´
+
+# ðŸ› ï¸ ì˜ˆì™¸ì²˜ë¦¬
+
+## `try - except` ë¬¸
+```python
 try:
-    ¿¹¿Ü ¹ß»ýÇÒ ¿ì·Á°¡ÀÖ´Â ÄÚµå
-except ¿¹¿ÜÅ¸ÀÔ :
-    ¿¹¿Ü°¡ ¹ß»ýÇÒ °æ¿ì ½ÇÇàµÇ´Â ÄÚµå
+    ì˜ˆì™¸ ë°œìƒí•  ìš°ë ¤ê°€ ìžˆëŠ” ì½”ë“œ
+except ì˜ˆì™¸íƒ€ìž…:
+    ì˜ˆì™¸ê°€ ë°œìƒí•  ê²½ìš° ì‹¤í–‰ë˜ëŠ” ì½”ë“œ
 ```
 
-- ¾î¶² ¿¹¿Ü »óÈ²¿¡ ÀÇÇØ¼­ except°¡ ½ÇÇàµÇ¾ú´ÂÁö ¾Ë°í ½ÍÀ¸¸é?
-    1. `Exception as e` ¶ó´Â ¹®¹ýÀ» ÅëÇØ Exception º¯¼ö ¸¦ ¼±¾ð
-    2. e°ªÀ» ´ÙÀ½°ú °°ÀÌ Ãâ·ÂÇÏ¸é ¿À·ùÀÇ Á¾·ù¸¦ ¾Ë ¼ö ÀÖ´Ù.
-    ```py
+- **ì–´ë–¤ ì˜ˆì™¸ ìƒí™©ì— ì˜í•´ì„œ `except`ê°€ ì‹¤í–‰ë˜ì—ˆëŠ”ì§€ ì•Œê³  ì‹¶ìœ¼ë©´?**
+    1. `Exception as e` ë¬¸ë²•ì„ í†µí•´ `Exception` ë³€ìˆ˜ë¥¼ ì„ ì–¸
+    2. `e` ê°’ì„ ì¶œë ¥í•˜ì—¬ ì˜¤ë¥˜ì˜ ì¢…ë¥˜ë¥¼ ì•Œ ìˆ˜ ìžˆìŒ
+    ```python
     try:
         b = 2/0
-        a = 1+'hundred'
+        a = 1 + 'hundred'
+    except ZeroDivisionError:  # êµ¬ì²´ì ì¸ ì˜ˆì™¸ì²˜ë¦¬
+        print("0ìœ¼ë¡œ ë‚˜ëˆ„ëŠ” ì˜¤ë¥˜")
+    except TypeError:  # êµ¬ì²´ì ì¸ ì˜ˆì™¸ì²˜ë¦¬
+        print("ì§€ì›í•˜ì§€ ì•Šì€ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•˜ëŠ” ì˜¤ë¥˜")
+    except Exception as e:  # ë³´íŽ¸ì ì¸ ì˜ˆì™¸ì²˜ë¦¬
+        print("error:", e)
 
-    except ZeroDivisionError:   #±¸Ã¼ÀûÀÎ ¿¹¿ÜÃ³¸®
-            print("0À¸·Î ³ª´©´Â ¿À·ù")
-    
-    except TypeError:   #±¸Ã¼ÀûÀÎ ¿¹¿ÜÃ³¸®
-        print("Áö¿øÇÏÁö ¾ÊÀº ¿¬»êÀÚ¸¦ »ç¿ëÇÏ´Â ¿À·ù")
-
-    except Exception as e:  #º¸ÆíÀûÀÎ ¿¹¿ÜÃ³¸®
-        print("error :",e)
-
-    #>> error : division by zero
-    #>> error : unsupported operand type(s) for +: 'int' and 'str'
+    # ì¶œë ¥:
+    # error: division by zero
+    # error: unsupported operand type(s) for +: 'int' and 'str'
     ```
-## `try - except - else` ¹®
-```py
+
+## `try - except - else` ë¬¸
+```python
 try:
-    a,b = input('µÎ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ').split()
-    result = int(a)/int(b)
+    a, b = input('ë‘ ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤: ').split()
+    result = int(a) / int(b)
 except ZeroDivisionError:
-    print("0À¸·Î ³ª´©´Â ¿À·ù")
+    print("0ìœ¼ë¡œ ë‚˜ëˆ„ëŠ” ì˜¤ë¥˜")
 except ValueError:
-    print("ÀÔ·Â°ªÀÌ Á¤¼ö³ª ½Ç¼ö°¡ ¾Æ´Õ´Ï´Ù")
+    print("ìž…ë ¥ê°’ì´ ì •ìˆ˜ë‚˜ ì‹¤ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤")
 except:
-    print("10 2¿Í °°ÀÌ µÎ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä")
-else:   # Á¤»óÀûÀÎ °ªÀÌ µé¾î¿À¸é Ã³¸®µÉ ÇÁ·Î±×·¥
-    print("{}/{}={}".format(a,b,result))
+    print("10 2ì™€ ê°™ì´ ë‘ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”")
+else:  # ì •ìƒì ì¸ ê°’ì´ ë“¤ì–´ì˜¤ë©´ ì²˜ë¦¬ë  í”„ë¡œê·¸ëž¨
+    print("{}/{}={}".format(a, b, result))
 ```
 
-## `try-except-finally` ¹®
->- try: ¸ÕÀú ½ÇÇàµÇ¾î ¿¹¿Ü°¡ ¹ß»ýÇÏÁö ¾ÊÀ¸¸é except·Î °Ç³Ê¶Ù°í, ¿¹¿Ü°¡ ¹ß»ýÇÏ¸é ¿À·ù¸¦ È®ÀÎÇÏ¿© exceptÀÇ ¸ÅÄªµÇ´Â ºÎºÐÀ¸·Î ³Ñ°ÜÁØ´Ù.
->- except: ¿¹¿Ü°¡ ¹ß»ýÇßÀ» ¶§ Ã³¸®ÇÒ ³»¿ëÀ» ´ãÀ½
->- else: ¿¹¿Ü°¡ ¹ß»ýÇÏÁö ¾ÊÀ»¶§ ½ÇÇàÇÏ°Ô µÇ´Â ºí·Ï
->- finally: ¿¹¿ÜÀÇ ¹ß»ý ¿©ºÎ¿Í »ó°ü¾øÀÌ Ç×»ó ½ÇÇàµÇ´Â ºí·Ï
+## `try - except - finally` ë¬¸
+- **try**: ë¨¼ì € ì‹¤í–‰ë˜ì–´ ì˜ˆì™¸ê°€ ë°œìƒí•˜ì§€ ì•Šìœ¼ë©´ `except`ë¡œ ê±´ë„ˆë›°ê³ , ì˜ˆì™¸ê°€ ë°œìƒí•˜ë©´ ì˜¤ë¥˜ë¥¼ í™•ì¸í•˜ì—¬ `except`ì˜ ë§¤ì¹­ë˜ëŠ” ë¶€ë¶„ìœ¼ë¡œ ë„˜ê²¨ì¤Œ
+- **except**: ì˜ˆì™¸ê°€ ë°œìƒí–ˆì„ ë•Œ ì²˜ë¦¬í•  ë‚´ìš©ì„ ë‹´ìŒ
+- **else**: ì˜ˆì™¸ê°€ ë°œìƒí•˜ì§€ ì•Šì„ ë•Œ ì‹¤í–‰í•˜ê²Œ ë˜ëŠ” ë¸”ë¡
+- **finally**: ì˜ˆì™¸ì˜ ë°œìƒ ì—¬ë¶€ì™€ ìƒê´€ì—†ì´ í•­ìƒ ì‹¤í–‰ë˜ëŠ” ë¸”ë¡
 
-```py
-def divide(x,y):
+```python
+def divide(x, y):
     try:
-        result = x/y
+        result = x / y
     except ZeroDivisionError:
-        print("0À¸·Î ³ª´©´Â ¿À·ù¹ß»ý")
+        print("0ìœ¼ë¡œ ë‚˜ëˆ„ëŠ” ì˜¤ë¥˜ ë°œìƒ")
     else:
-        print("°á°ú :",result)
+        print("ê²°ê³¼:", result)
     finally:
-        print("¼öÇà¿Ï·á")
-divide(100,2)
-divide(100,0)
+        print("ìˆ˜í–‰ ì™„ë£Œ")
+
+divide(100, 2)
+divide(100, 0)
 ```
-## `raise` ¹®
-- ¿¹¿Ü¸¦ °­Á¦·Î ¹ß»ý½ÃÅ³ ¼ö ÀÖ´Ù.
-```py
+
+## `raise` ë¬¸
+- ì˜ˆì™¸ë¥¼ ê°•ì œë¡œ ë°œìƒì‹œí‚¬ ìˆ˜ ìžˆìŒ
+
+```python
 def get_ans(ans):
-    if ans in ['¿¹','¾Æ´Ï¿À']:  # ÀÔ·Â°ªÀÌ ¿¹ or ¾Æ´Ï¿À 
-        print("Á¤»óÀûÀÎ ÀÔ·Â")
+    if ans in ['ì˜ˆ', 'ì•„ë‹ˆì˜¤']:  # ìž…ë ¥ê°’ì´ 'ì˜ˆ' ë˜ëŠ” 'ì•„ë‹ˆì˜¤'
+        print("ì •ìƒì ì¸ ìž…ë ¥")
     else:
-        raise ValueError('ÀÔ·ÂÀ» È®ÀÎÇÏ¼¼¿ä')   # °­Á¦·Î value error ¹ß»ý½ÃÅ´
+        raise ValueError('ìž…ë ¥ì„ í™•ì¸í•˜ì„¸ìš”')  # ê°•ì œë¡œ ValueError ë°œìƒì‹œí‚´
+
 while True:
     try:
-        ans = input('¿¹/¾Æ´Ï¿À Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä :')
+        ans = input('ì˜ˆ/ì•„ë‹ˆì˜¤ ì¤‘ í•˜ë‚˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”:')
         get_ans(ans)
         break
     except Exception as e:
-        print("error :",e)
+        print("error:", e)
 ```
 
-# ÆÄÀÏ ÀÔÃâ·Â
-#### ÆÄÀÏ : ÄÄÇ»ÅÍÀÇ ÀúÀåÀåÄ¡ ³»¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±â À§ÇØ »ç¿ëÇÏ´Â ³í¸®ÀûÀÎ ´ÜÀ§
-- ÇÏµåµð½ºÅ©³ª ¿ÜÀåµð½ºÅ© °°Àº ÀúÀå ÀåÄ¡¿¡ ÀúÀåÇÑ ÈÄ ÇÊ¿äÇÒ ¶§ ´Ù½Ã ºÒ·¯ »ç¿ëÇÏ´Â °ÍÀÌ °¡´É.
-- ÇÊ¿ä¿¡ µû¶ó ¼öÁ¤ÇÏ´Â°Íµµ °¡´É
-- py,txt,doc,hwp,pdf ¿Í °°Àº È®ÀåÀÚ¸¦ ºÙ¿© ÆÄÀÏÀÇ Á¾·ù¸¦ ±¸ºÐ
-#### °æ·Î : ÄÄÇ»ÅÍ ÀúÀåÀåÄ¡³»ÀÇ ÆÄÀÏÀ§Ä¡
-#### ÆÄÀÏÀ» ¿­°í »ç¿ëÇÑÈÄ ´Ý´Â ´Ü°è
-1. ÆÄÀÏ¿­±â
-2. ÆÄÀÏÀÇ ÀÐ±â, ¾²±â ¶Ç´Â ÆÄÀÏÀÇ ³»¿ë¼öÁ¤
-3. ÆÄÀÏ ´Ý±â
+# ðŸ“‚ íŒŒì¼ ìž…ì¶œë ¥
 
-### ÆÄÀÏ¾²±â¿Í ¸ðµå
-```py
-f=open("hello.txt",'w')
-f.write("hello World!")
+#### íŒŒì¼: ì»´í“¨í„°ì˜ ì €ìž¥ ìž¥ì¹˜ ë‚´ì— ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê¸° ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ë…¼ë¦¬ì ì¸ ë‹¨ìœ„
+- í•˜ë“œë””ìŠ¤í¬ë‚˜ ì™¸ìž¥ë””ìŠ¤í¬ ê°™ì€ ì €ìž¥ ìž¥ì¹˜ì— ì €ìž¥í•œ í›„ í•„ìš”í•  ë•Œ ë‹¤ì‹œ ë¶ˆëŸ¬ ì‚¬ìš© ê°€ëŠ¥
+- í•„ìš”ì— ë”°ë¼ ìˆ˜ì •í•˜ëŠ” ê²ƒë„ ê°€ëŠ¥
+- `.py`, `.txt`, `.doc`, `.hwp`, `.pdf`ì™€ ê°™ì€ í™•ìž¥ìžë¥¼ ë¶™ì—¬ íŒŒì¼ì˜ ì¢…ë¥˜ë¥¼ êµ¬ë¶„
+
+#### ê²½ë¡œ: ì»´í“¨í„° ì €ìž¥ ìž¥ì¹˜ ë‚´ì˜ íŒŒì¼ ìœ„ì¹˜
+
+#### íŒŒì¼ì„ ì—´ê³  ì‚¬ìš©í•œ í›„ ë‹«ëŠ” ë‹¨ê³„
+1. **íŒŒì¼ ì—´ê¸°**
+2. **íŒŒì¼ì˜ ì½ê¸°, ì“°ê¸° ë˜ëŠ” íŒŒì¼ì˜ ë‚´ìš© ìˆ˜ì •**
+3. **íŒŒì¼ ë‹«ê¸°**
+
+## ðŸ“„ íŒŒì¼ ì“°ê¸°ì™€ ëª¨ë“œ
+```python
+f = open("hello.txt", 'w')
+f.write("Hello World!")
 f.close()
 ```
-|¸ðµå|ÀÇ¹Ì|
+
+|ëª¨ë“œ|ì˜ë¯¸|
 |--|--|
-|r|ÀÐ±âÀü¿ë¸ðµå, ÆÄÀÏÀÌ ÀÖ¾î¾ßÇÔ|
-|w|¾²±âÀü¿ë¸ðµå, ÆÄÀÏ¾ø¾îµµµÊ|
-|a|¾²±â¸ðµå·Î ¿­¾î ±âÁ¸ÆÄÀÏµÚ¿¡ »õ·Î ÀÛ¼ºµÈ ³»¿ë Ãß°¡, ÆÄÀÏ¾ø¾îµµµÊ|
-|x|¾²±â¸ðµå·Î ¿­¾î, ÆÄÀÏÀ» »õ·Î ¸¸µé±â À§ÇØ »ç¿ëÇÔ. ÆÄÀÏ¾ø¾î¾ßÇÔ|
-|+|ÀÐ±â¾²±â¸ðµå. ex) r+ ÀÐ±â¸ðµå·Î ¿­¾î ¾²±â±îÁö °¡´É|
+|`r`|ì½ê¸° ì „ìš© ëª¨ë“œ, íŒŒì¼ì´ ìžˆì–´ì•¼ í•¨|
+|`w`|ì“°ê¸° ì „ìš© ëª¨ë“œ, íŒŒì¼ ì—†ì–´ë„ ë¨|
+|`a`|ì“°ê¸° ëª¨ë“œë¡œ ì—´ì–´ ê¸°ì¡´ íŒŒì¼ ë’¤ì— ìƒˆë¡œ ìž‘ì„±ëœ ë‚´ìš© ì¶”ê°€, íŒŒì¼ ì—†ì–´ë„ ë¨|
+|`x`|ì“°ê¸° ëª¨ë“œë¡œ ì—´ì–´, íŒŒì¼ì„ ìƒˆë¡œ ë§Œë“¤ê¸° ìœ„í•´ ì‚¬ìš©í•¨. íŒŒì¼ ì—†ì–´ì•¼ í•¨|
+|`+`|ì½ê¸° ì“°ê¸° ëª¨ë“œ. ex) `r+` ì½ê¸° ëª¨ë“œë¡œ ì—´ì–´ ì“°ê¸°ê¹Œì§€ ê°€ëŠ¥|
 
-|ÆÄÀÏ¸ðµå|ÀÇ¹Ì|
+|íŒŒì¼ ëª¨ë“œ|ì˜ë¯¸|
 |--|--|
-|t|ÅØ½ºÆ® ÆÄÀÏÇü½ÄÀ¸·Î ¿­°Å³ª »ý¼º|
-|b|ÀÌÁøÆÄÀÏÇü½ÄÀ¸·Î ÆÄÀÏÀ» ¿­°Å³ª »ý¼º|
+|`t`|í…ìŠ¤íŠ¸ íŒŒì¼ í˜•ì‹ìœ¼ë¡œ ì—´ê±°ë‚˜ ìƒì„±|
+|`b`|ì´ì§„ íŒŒì¼ í˜•ì‹ìœ¼ë¡œ íŒŒì¼ì„ ì—´ê±°ë‚˜ ìƒì„±|
 
-`f.open("hello.txt",'wt') //ÆÄÀÏÀ» ÅØ½ºÆ®·Î ¿­±â`
+```python
+f = open("hello.txt", 'wt')  # íŒŒì¼ì„ í…ìŠ¤íŠ¸ë¡œ ì—´ê¸°
+```
 
-`f.write()` ¸¸À¸·Î´Â ÁÙ¹Ù²ÞÀÌ ÀÌ·ç¾îÁöÁö ¾ÊÀ¸¸ç, \n ÀÔ·ÂÇØ¾ß ÆÄÀÏ ³» ÁÙ¹Ù²ÞÀÌ ÀÌ·ç¾îÁø´Ù.
+- `f.write()` ë§Œìœ¼ë¡œëŠ” ì¤„ë°”ê¿ˆì´ ì´ë£¨ì–´ì§€ì§€ ì•Šìœ¼ë©°, `\n`ì„ ìž…ë ¥í•´ì•¼ íŒŒì¼ ë‚´ ì¤„ë°”ê¿ˆì´ ì´ë£¨ì–´ì§
+- `f.close()`ë¡œ ë²„í¼ì˜ ë‚´ìš©ì„ ë””ìŠ¤í¬ë¡œ ë³´ë‚´ê³  ë²„í¼ í¬ê¸°ë§Œí¼ ë©”ëª¨ë¦¬ê°€ ë¹„ì›Œì§€ê²Œ ë¨
 
-`f.close()` ·Î ¹öÆÛÀÇ ³»¿ëÀ» µð½ºÅ©·Î º¸³»°í ¹öÆÛ Å©±â¸¸Å­ ¸Þ¸ð¸®°¡ ºñ¿öÁö°ÔµÈ´Ù.
-
-### ÆÄÀÏ ÀÐ±â
-```py
-f=open("hello.txt","r")
-s=f.read()  # ÆÄÀÏ ÀüÃ¼¸¦ ÀÐ´Â´Ù. f.read(5)¸é, 5±ÛÀÚ¸¸ ÀÐ´Â´Ù.
+## ðŸ“– íŒŒì¼ ì½ê¸°
+```python
+f = open("hello.txt", "r")
+s = f.read()  # íŒŒì¼ ì „ì²´ë¥¼ ì½ìŒ. f.read(5)ë©´, 5ê¸€ìžë§Œ ì½ìŒ
 print(s)
 f.close()
 ```
-`readline()`     : ÆÄÀÏÀÇ ³»¿ëÀ» ÁÙ´ÜÀ§·Î ÀÐ´Â´Ù.(\nÆ÷ÇÔÇÏ´Ï, Ãâ·Â½Ã¿£ end=""½áÁÖ±â !)
-- ÇÑ¹ø ½ÇÇà½Ã Ã¹¹øÂ°ÁÙ, ÇÑ¹ø´õ ½ÇÇà½Ã µÎ¹øÂ°ÁÙ...
 
-### ÆÄÀÏ Ãß°¡ÇÏ±â
-```py
-f=open("hello.txt",'a+')    #ÆÄÀÏ Ãß°¡ÀÐ±â¸ðµå·Î ¿­±â
-f.write("hello World!")     # hello world°¡ Ãß°¡µÈ´Ù.
+- `readline()`: íŒŒì¼ì˜ ë‚´ìš©ì„ ì¤„ ë‹¨ìœ„ë¡œ ì½ìŒ (`\n` í¬í•¨í•˜ë‹ˆ, ì¶œë ¥ ì‹œì—” `end=""` ì¨ì£¼ê¸°!)
+    - í•œ ë²ˆ ì‹¤í–‰ ì‹œ ì²« ë²ˆì§¸ ì¤„, í•œ ë²ˆ ë” ì‹¤í–‰ ì‹œ ë‘ ë²ˆì§¸ ì¤„...
+
+## ðŸ“„ íŒŒì¼ ì¶”ê°€í•˜ê¸°
+```python
+f = open("hello.txt", 'a+')  # íŒŒì¼ ì¶”ê°€ ì½ê¸° ëª¨ë“œë¡œ ì—´ê¸°
+f.write("Hello World!")  # Hello Worldê°€ ì¶”ê°€ë¨
 f.close()
 ```
 
-> ³»ºÎ¿¡ ÇÑ±ÛÀÌ Æ÷ÇÔµÇ¾îÀÖÀ»½Ã ¿À·ù°¡ ¹ß»ýÇÒ ¼ö ÀÖ´Ù. f=open(fname, 'r', encoding="UTF8")
+> ë‚´ë¶€ì— í•œê¸€ì´ í¬í•¨ë˜ì–´ ìžˆì„ ì‹œ ì˜¤ë¥˜ê°€ ë°œìƒí•  ìˆ˜ ìžˆìŒ. `f = open(fname, 'r', encoding="UTF8")`
 
-## `with ¹®¹ý`
-```py
-with open("hello.txt",'w') as f:    # ÆÄÀÏ ¿­±â¿Í ´Ý±â¸¦ ÀÚµ¿ ¼öÇà !
-    f.write("hello World!")
+## ðŸ” `with` ë¬¸ë²•
+```python
+with open("hello.txt", 'w') as f:  # íŒŒì¼ ì—´ê¸°ì™€ ë‹«ê¸°ë¥¼ ìžë™ ìˆ˜í–‰!
+    f.write("Hello World!")
 ```

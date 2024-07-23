@@ -63,7 +63,7 @@ window = Tk()
 input_entry = Entry(window,width=50)
 input_entry.pack()
 
-button = Button(window,text='贸府')d
+button = Button(window,text='贸府')
 button.pack()
 
 label = Label(window,text='')
